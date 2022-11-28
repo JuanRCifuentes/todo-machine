@@ -11,8 +11,7 @@ function CreateTodoButton() {
 
     return (
         <button className="CreateTodoButton" onClick={onClickButton}>
-            {/* <div className="CreateTODOButton-circle">h</div> */}
-            <img className="hijo" src={PlusSign} alt="Add Todo" />
+            <img src={PlusSign} alt="Add Todo" />
         </button>
     );
 }
