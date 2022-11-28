@@ -24,6 +24,7 @@ function useLocalStorage(itemName, initialValue) {
           setError(error)
         }
       }, 1000)
+      // eslint-disable-next-line
     }, [])
   
     const saveItem = (newItem) => {
