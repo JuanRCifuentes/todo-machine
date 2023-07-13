@@ -1,24 +1,20 @@
 import './TodoItem.css'
+import Checkbox from '@mui/material/Checkbox';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 function TodoItem(props) {
 
     return (
         <li className="TodoItem">
-            <span 
-                className={`Icon Icon-check ${props.completed && 'Icon-check--active'}`}
-                onClick={props.onComplete}
-            >
-                √
-            </span>
+            
+            <Checkbox checked={props.completed} onChange={props.onComplete}/>
             <p className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>
                 {props.text}
             </p>
-            <span 
-                className="Icon Icon-delete"
+            <DeleteIcon 
+                className="Icon Icon-delete" 
                 onClick={props.onDelete}
-            >
-                X
-            </span>
+            />
       </li>
     )
 }
