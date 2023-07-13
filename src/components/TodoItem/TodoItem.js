@@ -10,21 +10,21 @@ function TodoItem(props) {
 
     return (
         <li className="TodoItem">
-            <CompleteIcon onComplete={props.onComplete}/>
-            {/* <Checkbox 
+            {/* <CompleteIcon onComplete={props.onComplete}/> */}
+            <Checkbox 
                 checked={props.completed} 
                 onChange={props.onComplete}
                 icon={<RadioButtonUncheckedIcon />}
                 checkedIcon={<RadioButtonCheckedIcon />}
-            /> */}
+            />
             <p className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>
                 {props.text}
             </p>
-            <DeleteIconC onDelete={props.onDelete}/>
-            {/* <DeleteIcon 
+            {/* <DeleteIconC onDelete={props.onDelete}/> */}
+            <DeleteIcon 
                 className="Icon Icon-delete" 
                 onClick={props.onDelete}
-            /> */}
+            />
       </li>
     )
 }

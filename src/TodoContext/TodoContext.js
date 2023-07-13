@@ -6,10 +6,10 @@ import { useLocalStorage } from './useLocalStorage'
  function TodoProvider(props){
 
     const { 
-      item: todos, 
+      item: todos,
       saveItem: saveTodos,
       loading,
-      error 
+      error
     } = useLocalStorage('TODOS_V1', [])
     const [ searchValue, setSearchValue ] = useState('')
     const [ openModal, setOpenModal ] = useState(false)

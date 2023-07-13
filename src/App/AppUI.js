@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import React from "react";
 import { TodoContext } from "../TodoContext/TodoContext";
 import { TodoCounter } from "../components/TodoCounter/TodoCounter";
 import { TodoList } from "../components/TodoList/TodoList";
@@ -19,7 +20,7 @@ function AppUI() {
         openModal,
     } = useContext(TodoContext);
     return (
-        <div className="App">
+        <React.Fragment className="App">
             <TodoCounter />
 
             <TodoSearch />
@@ -49,7 +50,7 @@ function AppUI() {
                     <TodoForm />
                 </Modal>
             )}
-        </div>
+        </React.Fragment>
     );
 }
 
